@@ -1,0 +1,22 @@
+body{
+  background-color: black;
+}
+h1 {
+  color: blue;
+  font-size: 50px;
+  text-align: center;
+}
+#buttons {
+  margin-right: 200px;
+  color: #ffffff;
+text-align: center;
+}
+#buttons i{
+  margin-right: 25px;
+
+}
+
+img{
+padding: 50px 0px 0px 0;
+margin-left: 280px;
+}
