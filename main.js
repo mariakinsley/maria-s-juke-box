@@ -1,6 +1,4 @@
 
-console.log("hello")
-
 var backward = document.getElementById ("backward")
 var forward= document.getElementById ("forward")
 var play = document.getElementById ("play")
@@ -8,23 +6,78 @@ var pause= document.getElementById ("pause")
 var stop = document.getElementById("stop")
 var audio = document.getElementById("audio")
 var i = 0
-// var button = document.querySelector()
+var searchbtn =document.querySelector("#search")
+var search = document.querySelector("#name")
+
+
 
 function jukebox(){
   this.songArray = []
 }
-
 jukebox.prototype.addSong = function(music1){
   this.songArray.push(music1)
 }
 
 var jb = new jukebox()
-jb.addSong("song1.mp3")
+jb.addSong("song01.mp3")
 jb.addSong("song2.mp3")
 jb.addSong("song3.mp3")
 
 
 
+// tracks = ["strings of songs"];
+
+// soundCloud = new MusicPlayer(tracks);
+
+
+// function MusicPlayer( songIds ) {
+// var that = this;
+// this.players = []; //[players1,players2,players3,players4];
+// this.currentTrack = 0;
+// this.play = function(){
+// 		console.log("this:", this, "that:", that);
+//  		console.log(this.tracks)
+//  		if (that.players[that.currentTrack].pause());{
+// 			that.players[that.currentTrack].play();
+// 		}
+//     this.loadPlayers = function( array ) {
+//     		console.log( "loadingPlayers mon!", array, array.length );
+//     		if( array.length > 0 ) {
+//
+//     			SC.stream("/tracks/" + array[0] ).then(function(player){
+//     				that.players.push(player);
+//     				that.loadPlayers( array.slice(1) );
+//     			});
+//     		} else {
+//     			that.players[that.currentTrack].play();
+//     		}
+//     	}
+//
+// 	this.pause = function(){
+// 		if (!this.players[this.currentTrack].play());{
+// 			this.players[this.currentTrack].pause();
+// 		}
+// 		console.log(this.pause)
+//
+// 	}
+// //   this.loadPlayers(songIds);
+// //   document.getElementById("Play").addEventListener("click",
+// // 			soundCloud.play);
+// //
+// // 	document.getElementById("Pause").addEventListener("click",
+// // 			function(){soundCloud.pause();});
+// //
+// //
+// // 	document.getElementById("Next").addEventListener("click",
+// // 	 		function(){soundCloud.next();});
+// //
+// //
+// // 	document.getElementById("Back").addEventListener("click",
+// //  			function(){soundCloud.back();});
+// //
+// // });
+//
+// ==========================================================
  jukebox.prototype.play = function(){
    audio.play();
  }
@@ -83,27 +136,20 @@ backward.addEventListener("click", function(event){
   event.preventDefault();
   jb.back();
 })
- 
-// jb.play();
+// jb.back();
 
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
+
+
+
+
+
+
+
+
+
 //
 // // ==================================================================================
 // // // targets the play button from the page and

@@ -7,20 +7,14 @@
   <link rel="stylesheet" href="font-awesome/font-awesome.min.css">
 <script src="https://use.fontawesome.com/3b7840d4ba.js"></script>
 <link rel="stylesheet" href="index.css">
-
-
-
-
   <title>juke-box</title>
 </head>
 <body>
-  <h1>maria'sjuke-box</h1>
 
+  <h1>maria's juke-box</h1>
 
-
-
-
-
+<hr>
+<br>
   <audio id="audio" src=""></audio>
   <div id ="buttons">
     <a id="backward"><i class="fa fa-fast-backward fa-3x" aria-hidden="true"></i></a>
@@ -28,18 +22,27 @@
     <a id="play"><i class="fa fa-play-circle fa-3x" aria-hidden="true"></i></a>
     <a id="pause"><i class="fa fa-pause  fa-3x" aria-hidden="true"></i></a>
     <a id="stop"><i class="fa fa-stop  fa-3x" aria-hidden="true"></i></a><br>
-    <form action="touch me">
-      Songs: <input type="search" name="music">
-    </form>
+    <br>
 
 
-  </div>
+    <form action="/my-handling-form-page" method="post">
+        <div>
+            <label for="name">songname:</label>
+            <input type="text" id="name" name="user_name">
+            <button type="button" name="button"id="search">search</button>
+
+        </div>
+        <div>
 
 
 
 
+      <div id="snow">
+      </div>
 
 
+
+<script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
 <script src="main.js" charset="utf-8"></script>
 </body>
 </html>
