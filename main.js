@@ -1,21 +1,20 @@
-
-var backward = document.getElementById ("backward")
-var forward= document.getElementById ("forward")
-var play = document.getElementById ("play")
-var pause= document.getElementById ("pause")
+var backward = document.getElementById("backward")
+var forward = document.getElementById("forward")
+var play = document.getElementById("play")
+var pause = document.getElementById("pause")
 var stop = document.getElementById("stop")
 var audio = document.getElementById("audio")
 var i = 0
-var searchbtn =document.querySelector("#search")
+var searchbtn = document.querySelector("#search")
 var search = document.querySelector("#name")
 
 
 
-function jukebox(){
-  this.songArray = []
+function jukebox() {
+    this.songArray = []
 }
-jukebox.prototype.addSong = function(music1){
-  this.songArray.push(music1)
+jukebox.prototype.addSong = function(music1) {
+    this.songArray.push(music1)
 }
 
 var jb = new jukebox()
@@ -78,69 +77,65 @@ jb.addSong("song3.mp3")
 // // });
 //
 // ==========================================================
- jukebox.prototype.play = function(){
-   audio.play();
- }
-
- audio.src = jb.songArray[i];
-
- jukebox.prototype.pause = function(){
-   audio.pause();
-
- }
-jukebox.prototype.forward = function(){
-  i++
-  if(i < jb.songArray.length){
-    audio.pause()
-    audio.src = jb.songArray[i]
-    audio.play()
-  } else {
-    i = 0;
-    audio.pause()
-    audio.src=jb.songArray[i]
-    audio.play()
-  }
-}
-jukebox.prototype.back = function(){
-  i --
-  if (i >= 0 ){
-    audio.pause()
-    audio.src=jb.songArray[i]
-    audio.play()
-
-  } else {
-    i = jb.songArray.length -1;
-    audio.pause()
-    audio.src=jb.songArray[i]
-    audio.play()
-
-  }
+jukebox.prototype.play = function() {
+    audio.play();
 }
 
-play.addEventListener("click", function(event){
-  event.preventDefault();
-  jb.play();
+audio.src = jb.songArray[i];
+
+jukebox.prototype.pause = function() {
+    audio.pause();
+
+}
+jukebox.prototype.forward = function() {
+    i++
+    if (i < jb.songArray.length) {
+        audio.pause()
+        audio.src = jb.songArray[i]
+        audio.play()
+    } else {
+        i = 0;
+        audio.pause()
+        audio.src = jb.songArray[i]
+        audio.play()
+    }
+}
+jukebox.prototype.back = function() {
+    i--
+    if (i >= 0) {
+        audio.pause()
+        audio.src = jb.songArray[i]
+        audio.play()
+
+    } else {
+        i = jb.songArray.length - 1;
+        audio.pause()
+        audio.src = jb.songArray[i]
+        audio.play()
+
+    }
+}
+
+play.addEventListener("click", function(event) {
+    event.preventDefault();
+    jb.play();
 })
 
-pause.addEventListener("click", function(event){
-  event.preventDefault();
-  jb.pause();
+pause.addEventListener("click", function(event) {
+    event.preventDefault();
+    jb.pause();
 })
 
-forward.addEventListener("click", function(event){
-  event.preventDefault();
-  jb.forward();
+forward.addEventListener("click", function(event) {
+    event.preventDefault();
+    jb.forward();
 })
 
-backward.addEventListener("click", function(event){
-  event.preventDefault();
-  jb.back();
+backward.addEventListener("click", function(event) {
+    event.preventDefault();
+    jb.back();
 })
 // jb.back();
-
-
-
-
 
 
 
